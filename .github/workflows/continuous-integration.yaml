@@ -31,7 +31,7 @@ jobs:
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
         with:
-          version: "10.30.2" # Specify pnpm version
+          version: "10.30.3" # Specify pnpm version
 
       # Step 4: Set up Node.js environment
       - name: Setup Node.js
