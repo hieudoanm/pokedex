@@ -24,6 +24,8 @@
     "format": "prettier --cache --write .",
     "predev": "rimraf .next && kill-port 3000",
     "dev": "next dev --turbopack",
+    "pretest": "jest --clearCache",
+    "test": "jest",
     "prebuild": "rimraf .next ../../docs",
     "build": "next build",
     "postbuild": "touch ../../docs/.nojekyll",
