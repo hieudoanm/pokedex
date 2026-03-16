@@ -1,69 +1,83 @@
-import { java } from '@codemirror/lang-java';
-import { javascript } from '@codemirror/lang-javascript';
-import { markdown } from '@codemirror/lang-markdown';
-import { python } from '@codemirror/lang-python';
-import { rust } from '@codemirror/lang-rust';
-import { yaml } from '@codemirror/lang-yaml';
-import { oneDark } from '@codemirror/theme-one-dark';
-import CodeMirror from '@uiw/react-codemirror';
+import {
+  LandingContent,
+  LandingTemplate,
+} from '@coditor/templates/LandingTemplate';
 import { NextPage } from 'next';
-import { useState } from 'react';
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const languages: Record<string, () => any> = {
-  java,
-  javascript,
-  markdown,
-  python,
-  rust,
-  yaml,
+const content: LandingContent = {
+  navbar: {
+    title: 'AppName',
+    buttonText: 'Open App',
+    buttonHref: '/app',
+  },
+  hero: {
+    title: 'Simple, Powerful, and Built for Speed',
+    tagline:
+      'A fast and intuitive app designed to help you get things done quickly and efficiently.',
+    buttonText: 'Get Started',
+    buttonHref: '/app',
+  },
+  features: {
+    title: 'Features',
+    items: [
+      {
+        id: 'fast',
+        emoji: '⚡',
+        title: 'Fast and Responsive',
+        description:
+          'Enjoy a smooth and responsive experience designed for speed and efficiency.',
+      },
+      {
+        id: 'easy',
+        emoji: '✨',
+        title: 'Easy to Use',
+        description:
+          'Clean and intuitive design that lets you focus on what matters most.',
+      },
+      {
+        id: 'powerful',
+        emoji: '🧰',
+        title: 'Powerful Tools',
+        description:
+          'Packed with useful features to help you work smarter and more effectively.',
+      },
+      {
+        id: 'privacy',
+        emoji: '🔒',
+        title: 'Privacy First',
+        description:
+          'Your data stays in your control with privacy-focused design and secure processing.',
+      },
+      {
+        id: 'accessible',
+        emoji: '🌐',
+        title: 'Accessible Anywhere',
+        description:
+          'Use the app from any modern browser on desktop, tablet, or mobile.',
+      },
+      {
+        id: 'lightweight',
+        emoji: '📦',
+        title: 'Lightweight',
+        description:
+          'Minimal dependencies and optimized performance for a fast loading experience.',
+      },
+    ],
+  },
+  cta: {
+    title: 'Ready to Get Started?',
+    description:
+      'Open the app and start using it instantly. No signup required.',
+    buttonText: 'Open App',
+    buttonHref: '/app',
+  },
+  footer: {
+    name: 'AppName',
+  },
 };
 
 const HomePage: NextPage = () => {
-  const [{ language = 'javascript', code = '' }, setState] = useState<{
-    language: string;
-    code: string;
-  }>({
-    language: 'javascript',
-    code: `function hello() {\n  console.log("Hello world")\n}`,
-  });
-
-  return (
-    <div className="bg-base-100 flex h-screen w-screen text-neutral-200">
-      <div className="flex w-full flex-col">
-        <select
-          id="language"
-          name="language"
-          className="select select-ghost w-full"
-          value={language}
-          onChange={(event) =>
-            setState((previous) => ({
-              ...previous,
-              language: event.target.value,
-            }))
-          }>
-          <option value="java">Java</option>
-          <option value="javascript">Javascript</option>
-          <option value="python">Python</option>
-          <option value="markdown">Markdown</option>
-          <option value="rust">Rust</option>
-          <option value="yaml">YAML</option>
-        </select>
-        <div className="grow">
-          <CodeMirror
-            value={code}
-            height="100%"
-            className="bg-base-100 h-full w-full"
-            theme={oneDark}
-            extensions={[languages[language]()]}
-            onChange={(value) =>
-              setState((previous) => ({ ...previous, code: value }))
-            }
-          />
-        </div>
-      </div>
-    </div>
-  );
+  return <LandingTemplate content={content} />;
 };
 
 export default HomePage;
