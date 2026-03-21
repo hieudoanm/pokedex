@@ -1,189 +1,178 @@
-# 🔬 [Micro](https://microscope.vercel.app)
-
-**The Ultimate In-Browser Toolkit for Devs & Makers**
-Edit, convert, calculate, redact, preview — all locally and securely in your browser.
-
----
+# 🚀 [Coditor](https://hieudoanm.github.io/coditor/)
 
 ## 📚 Table of Contents
 
-- [🔬 Micro](#-micro)
+- [🚀 Coditor](#-coditor)
   - [📚 Table of Contents](#-table-of-contents)
-  - [✨ Features](#-features)
-    - [🔧 1. Clone the Repository](#-1-clone-the-repository)
-    - [📦 2. Install Dependencies](#-2-install-dependencies)
-    - [⚙️ 3. Install Tauri CLI (Optional)](#️-3-install-tauri-cli-optional)
-    - [💻 4. Start the Development Server](#-4-start-the-development-server)
-  - [🧰 Tech Stack](#-tech-stack)
-  - [🚀 Available Tools](#-available-tools)
-    - [🔄 Converters](#-converters)
-    - [📝 Editors](#-editors)
-    - [♟️ Chess Tools](#️-chess-tools)
-    - [🧮 Calculators](#-calculators)
-    - [⏰ Time \& Utility Tools](#-time--utility-tools)
-    - [🔧 Generators](#-generators)
-    - [🐙 GitHub Tools](#-github-tools)
-    - [🧪 Other](#-other)
-  - [📦 Build for Production](#-build-for-production)
-  - [🛠️ Build Desktop App with Tauri](#️-build-desktop-app-with-tauri)
-  - [📄 License](#-license)
-  - [🙌 Acknowledgements](#-acknowledgements)
+  - [📖 1. Overview](#-1-overview)
+  - [✨ 2. Features](#-2-features)
+  - [🎥 3. Demo](#-3-demo)
+  - [🚀 4. Usage](#-4-usage)
+  - [🛠️ 5. Development Stack](#️-5-development-stack)
+    - [🖥️ 5.1 Development Tools](#️-51-development-tools)
+    - [⚙️ 5.2 Monorepo](#️-52-monorepo)
+    - [💻 5.3 Application](#-53-application)
+      - [⚛️ 5.3.1 Front-end](#️-531-front-end)
+      - [📡 5.3.2 Back-end](#-532-back-end)
+    - [📟 5.4 CLI (Command-line Interface)](#-54-cli-command-line-interface)
+  - [📄 6. License](#-6-license)
 
----
+## 📖 1. Overview
 
-## ✨ Features
+Coditor is a focused project in this monorepo that delivers a practical tool with a clean user experience across platforms.
 
-- 🧾 Convert between CSV, JSON, and YAML formats
-- 📄 Redact PDFs visually or permanently — all offline
-- 🧮 Convert values (length, weight, numeral systems, currencies)
-- 🧠 Analyze GitHub repos, generate Open Graph images
-- 🔁 Convert OpenAPI specs to Postman collections
-- ♟️ Render chess boards, generate Chess960, convert PGNs to GIFs
-- 🔤 Encode/decode strings, Braille, Morse
-- 📝 Markdown & manifest.json editors
-- 🔒 100% client-side. No uploads. No sign-ups.
+## ✨ 2. Features
 
----
+1. [x] Core functionality tailored to Coditor
+2. [x] Web experience for quick access
+3. [x] CLI distribution for automation workflows
+4. [x] Mobile-ready build targets
+5. [x] Desktop-ready build targets
 
-### 🔧 1. Clone the Repository
+## 🎥 3. Demo
 
-```shell
-git clone git@github.com:hieudoanm/openapi-to-postmanv2.git
-cd openapi-to-postmanv2
-```
+- 🌐 [Live Demo](https://hieudoanm.github.io/coditor/)
 
-### 📦 2. Install Dependencies
+## 🚀 4. Usage
 
-```shell
-pnpm install
-```
+- 🌐 [Web](https://hieudoanm.github.io/coditor/)
+- 💻 [CLI](https://github.com/hieudoanm/coditor/releases)
+- 📱 [Mobile](https://github.com/hieudoanm/coditor/releases)
+- 🖥️ [Desktop](https://github.com/hieudoanm/coditor/releases)
 
-### ⚙️ 3. Install Tauri CLI (Optional)
+## 🛠️ 5. Development Stack
 
-```shell
-cargo install tauri-cli
-```
+### 🖥️ 5.1 Development Tools
 
-> You’ll also need [Rust](https://www.rust-lang.org/tools/install)
+| No  | Group | Technology                 | GitHub              |
+| --- | ----- | -------------------------- | ------------------- |
+| 1   | IDE   | [Antigravity][antigravity] |                     |
+| 2   | IDE   | [Cursor][cursor]           | [GitHub][gh-cursor] |
+| 3   | Agent | [Claude][claude]           | [GitHub][gh-claude] |
 
-### 💻 4. Start the Development Server
+### ⚙️ 5.2 Monorepo
 
-```shell
-pnpm run dev
-```
+| No  | Group        | Technology             | GitHub                 |
+| --- | ------------ | ---------------------- | ---------------------- |
+| 1   | Git          | [GitHub][github]       | [GitHub][gh-github]    |
+| 2   | Git Hooks    | [Husky][husky]         | [GitHub][gh-husky]     |
+| 3   | Build        | [Turborepo][turborepo] | [GitHub][gh-turborepo] |
+| 4   | Dependencies | [Renovate][renovate]   | [GitHub][gh-renovate]  |
 
-> Open [http://localhost:3000](http://localhost:3000) to view the app.
+### 💻 5.3 Application
 
----
+#### ⚛️ 5.3.1 Front-end
 
-## 🧰 Tech Stack
+| No  | Group            | Technology                  | GitHub                   |
+| --- | ---------------- | --------------------------- | ------------------------ |
+| 1   | Language         | [TypeScript][typescript]    | [GitHub][gh-typescript]  |
+| 2   | Runtime          | [Node.js][node.js]          | [GitHub][gh-node]        |
+| 3   | Packages Manager | [pnpm][pnpm]                | [GitHub][gh-pnpm]        |
+| 4   | Linter           | [ESLint][eslint]            | [GitHub][gh-eslint]      |
+| 5   | Formatter        | [Prettier][prettier]        | [GitHub][gh-prettier]    |
+| 6   | Testing          | [Jest][jest]                | [GitHub][gh-jest]        |
+| 7   | Framework        | [Next.js][nextjs]           | [GitHub][gh-nextjs]      |
+| 8   | Styling          | [Tailwind CSS][tailwindcss] | [GitHub][gh-tailwindcss] |
+| 9   | UI               | [DaisyUI][daisyui]          | [GitHub][gh-daisyui]     |
+| 10  | Desktop          | [Tauri][tauri]              | [GitHub][gh-tauri]       |
+| 11  | Mobile           | [Capacitor.js][capacitorjs] | [GitHub][gh-capacitorjs] |
+| 12  | Hosting          | [GitHub Pages][githubpages] | [GitHub][gh-githubpages] |
 
-- [Next.js](https://nextjs.org/)
-- [React](https://react.dev/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Tauri](https://tauri.app/)
-- [`js-yaml`](https://github.com/nodeca/js-yaml), [`papaparse`](https://www.papaparse.com/), `uuid`, and more
+#### 📡 5.3.2 Back-end
 
----
+| No  | Group   | Technology                    | GitHub                    |
+| --- | ------- | ----------------------------- | ------------------------- |
+| 1   | BFF     | [tRPC][trpc]                  | [GitHub][gh-trpc]         |
+| 2   | ORM     | [Prisma][prisma]              | [GitHub][gh-prisma]       |
+| 3   | KV      | [Redis][redis]                | [GitHub][gh-redis]        |
+| 4   | JSON    | [MongoDB][mongodb]            | [GitHub][gh-mongodb]      |
+| 5   | SQL     | [PostgreSQL][postgresql]      | [GitHub][gh-postgresql]   |
+| 6   | Auth    | [Auth.js][auth.js]            | [GitHub][gh-authjs]       |
+| 7   | Email   | [Resend][resend]              | [GitHub][gh-resend]       |
+| 8   | Payment | [Lemon Squeezy][lemonsqueezy] | [GitHub][gh-lemonsqueezy] |
 
-## 🚀 Available Tools
+### 📟 5.4 CLI (Command-line Interface)
 
-### 🔄 Converters
+| No  | Group     | Technology       | GitHub              |
+| --- | --------- | ---------------- | ------------------- |
+| 1   | Language  | [Golang][golang] | [GitHub][gh-golang] |
+| 2   | Framework | [Cobra][cobra]   | [GitHub][gh-cobra]  |
 
-- [📂 CSV Tools](/converter/csv)
-- [🧾 JSON Tools](/converter/json)
-- [📄 YAML Tools](/converter/yaml)
-- [💬 Braille & Morse Converter](/converter/code)
-- [🎨 Color Converter](/converter/colors)
-- [🔤 String Utilities](/converter/strings)
-- [🔁 OpenAPI to Postman V2](/converter/openapi2postmanv2)
+## 📄 6. License
 
-### 📝 Editors
+[GNU General Public License - Version 3 (GPL-3.0)](https://opensource.org/license/gpl-3.0)
 
-- [📝 Markdown Editor](/editor/markup)
-- [📘 Manifest Editor (PWA/Extensions)](/editor/manifest)
-- [🛡️ PDF Redaction](/editor/redact)
+<!-- Development Tools -->
 
-### ♟️ Chess Tools
+[antigravity]: https://antigravity.google/
+[cursor]: https://cursor.com/
+[claude]: https://claude.ai/
 
-- [🧩 FEN to PNG](/chess/converter/fen2png)
-- [🎞️ PGN to GIF](/chess/converter/pgn2gif)
-- [🔀 Chess960 Generator](/chess/theory/chess960)
-- [📚 Opening Explorer](/chess/theory/openings)
-- [📈 ELO Calculator](/chess/tools/elo)
-- [⏱️ Chess Clock](/chess/tools/clock)
+[gh-cursor]: https://github.com/cursor/cursor
+[gh-claude]: https://github.com/anthropics/claude-code
 
-### 🧮 Calculators
+<!-- Monorepo -->
 
-- [🧮 Base Converter](/calc/base)
-- [💱 Forex Calculator](/calc/forex)
-- [🪙 Crypto Calculator](/calc/crypto)
-- [📏 Length Converter](/calc/length)
-- [⚖️ Weight Converter](/calc/weight)
-- [🏛️ Roman Numeral Converter](/calc/roman)
+[github]: https://github.com/
+[husky]: https://typicode.github.io/husky/
+[turborepo]: https://turborepo.org/
+[renovate]: https://www.mend.io/renovate/
 
-### ⏰ Time & Utility Tools
+[gh-github]: https://github.com/github
+[gh-husky]: https://github.com/typicode/husky
+[gh-turborepo]: https://github.com/vercel/turborepo
+[gh-renovate]: https://github.com/renovatebot/renovate
 
-- [⏳ Pomodoro Timer](/clock/pomodoro)
-- [🌍 Timezone Viewer](/clock/timezones)
+<!-- Application -->
 
-### 🔧 Generators
+[typescript]: https://www.typescriptlang.org/
+[node.js]: https://nodejs.org/
+[pnpm]: https://pnpm.io/
+[eslint]: https://eslint.org/
+[prettier]: https://prettier.io/
+[jest]: https://jestjs.io/
+[nextjs]: https://nextjs.org/
+[tailwindcss]: https://tailwindcss.com/
+[daisyui]: https://daisyui.com/
+[tauri]: https://v2.tauri.app/
+[capacitorjs]: https://capacitorjs.com/
+[githubpages]: https://pages.github.com/
 
-- [🆔 UUID Generator](/generator/uuid)
-- [📷 QR Code Generator](/generator/qrcode)
+[gh-typescript]: https://github.com/microsoft/typescript
+[gh-node]: https://github.com/nodejs/node
+[gh-pnpm]: https://github.com/pnpm/pnpm
+[gh-eslint]: https://github.com/eslint/eslint
+[gh-prettier]: https://github.com/prettier/prettier
+[gh-jest]: https://github.com/facebook/jest
+[gh-nextjs]: https://github.com/vercel/next.js
+[gh-tailwindcss]: https://github.com/tailwindlabs/tailwindcss
+[gh-daisyui]: https://github.com/saadeghi/daisyui
+[gh-tauri]: https://github.com/tauri-apps/tauri
+[gh-capacitorjs]: https://github.com/ionic-team/capacitor
+[gh-githubpages]: https://github.com/pages/github
 
-### 🐙 GitHub Tools
+[trpc]: https://trpc.io/
+[prisma]: https://prisma.io/
+[redis]: https://redis.io/
+[mongodb]: https://www.mongodb.com/
+[postgresql]: https://www.postgresql.org/
+[auth.js]: https://authjs.dev/
+[resend]: https://resend.com/
+[lemonsqueezy]: https://www.lemonsqueezy.com/
 
-- [📊 GitHub Language Stats](/github/languages)
-- [🖼️ Social Preview Generator](/github/preview)
+[gh-trpc]: https://github.com/trpc/trpc
+[gh-prisma]: https://github.com/prisma/prisma
+[gh-redis]: https://github.com/redis/redis
+[gh-mongodb]: https://github.com/mongodb/mongo
+[gh-postgresql]: https://github.com/postgres/postgres
+[gh-authjs]: https://github.com/nextauthjs/next-auth
+[gh-resend]: https://github.com/resend
+[gh-lemonsqueezy]: https://github.com/lmsqueezy/lemonsqueezy.js
 
-### 🧪 Other
+<!-- CLI -->
 
-- [🧪 Periodic Table Explorer](/other/periodic-table)
-- [📊 Status Monitor](/other/status)
-- [💬 AI Chat](/other/chat)
-- [🖼️ Image Tools](/other/images)
+[golang]: https://go.dev/
+[cobra]: https://cobra.dev/
 
----
-
-## 📦 Build for Production
-
-```shell
-pnpm run build
-pnpm run start
-```
-
----
-
-## 🛠️ Build Desktop App with Tauri
-
-After installing the Tauri CLI:
-
-```shell
-pnpm tauri build
-```
-
-To run in desktop development mode:
-
-```shell
-pnpm tauri dev
-```
-
----
-
-## 📄 License
-
-Licensed under **GNU General Public License v3.0**
-See [LICENSE](./LICENSE) or visit:
-[https://www.gnu.org/licenses/gpl-3.0.html](https://www.gnu.org/licenses/gpl-3.0.html)
-
----
-
-## 🙌 Acknowledgements
-
-- [Next.js](https://nextjs.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Tauri](https://tauri.app/)
-- [js-yaml](https://github.com/nodeca/js-yaml)
-- [papaparse](https://www.papaparse.com/)
-- [uuid](https://github.com/uuidjs/uuid)
+[gh-golang]: https://github.com/golang/go
+[gh-cobra]: https://github.com/spf13/cobra
