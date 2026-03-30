@@ -1,6 +1,6 @@
 {
   "$schema": "../node_modules/@tauri-apps/cli/config.schema.json",
-  "productName": "Coditor",
+  "productName": "coditor",
   "version": "0.0.1",
   "identifier": "io.github.hieudoanm.coditor",
   "build": {
