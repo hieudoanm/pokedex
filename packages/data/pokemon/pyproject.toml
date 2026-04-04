@@ -5,7 +5,7 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = "==3.14.3"
 dependencies = [
-    "aiofiles>=25.1.0",
-    "aiohttp>=3.13.5",
-    "requests>=2.33.1",
+    "aiofiles==25.1.0",
+    "aiohttp==3.13.5",
+    "requests==2.33.1",
 ]

@@ -249,9 +249,9 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
-    { name = "aiofiles", specifier = ">=25.1.0" },
-    { name = "aiohttp", specifier = ">=3.13.5" },
-    { name = "requests", specifier = ">=2.33.1" },
+    { name = "aiofiles", specifier = "==25.1.0" },
+    { name = "aiohttp", specifier = "==3.13.5" },
+    { name = "requests", specifier = "==2.33.1" },
 ]
 
 [[package]]
