@@ -1,17 +1,17 @@
 {
-  "name": "@coditor/workspace",
+  "name": "@pokedex/workspace",
   "version": "0.0.1",
-  "description": "Coditor",
+  "description": "Pokedex",
   "keywords": [
-    "coditor"
+    "pokedex"
   ],
-  "homepage": "https://hieudoanm.github.io/coditor",
+  "homepage": "https://hieudoanm.github.io/pokedex",
   "bugs": {
-    "url": "https://github.com/hieudoanm/coditor/issues"
+    "url": "https://github.com/hieudoanm/pokedex/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/hieudoanm/coditor.git"
+    "url": "git+ssh://git@github.com/hieudoanm/pokedex.git"
   },
   "license": "GPL-3.0",
   "author": "hieudoanm <hieumdoan@gmail.com> (https://hieudoanm.github.io)",

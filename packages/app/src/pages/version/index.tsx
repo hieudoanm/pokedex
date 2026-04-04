@@ -1,5 +1,5 @@
+import { VersionTemplate } from '@pokedex/templates/VersionTemplate';
 import { GetStaticProps, NextPage } from 'next';
-import { VersionTemplate } from '@coditor/templates/VersionTemplate';
 
 type Props = {
   version: string;

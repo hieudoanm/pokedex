@@ -1,10 +1,10 @@
 [package]
-name = "coditor"
+name = "pokedex"
 version = "0.0.1"
-description = "Coditor"
+description = "Pokedex"
 authors = ["hieudoanm <hieumdoan@gmail.com> (https://hieudoanm.github.io)"]
 license = "GPL-3.0"
-repository = "git@github.com:hieudoanm/coditor.git"
+repository = "git@github.com:hieudoanm/pokedex.git"
 edition = "2024"
 rust-version = "1.85.0"
 

@@ -1,61 +1,52 @@
-import { java } from '@codemirror/lang-java';
-import { python } from '@codemirror/lang-python';
-import { rust } from '@codemirror/lang-rust';
-import { oneDark } from '@codemirror/theme-one-dark';
-import CodeMirror from '@uiw/react-codemirror';
+import pokemon from '@pokedex/json/pokemon.json';
+import { NextPage } from 'next';
 import { useState } from 'react';
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const languages: Record<string, () => any> = {
-  java,
-  python,
-  rust,
-};
+const AppPage: NextPage = () => {
+  const [search, setSearch] = useState('');
 
-export default function HomePage() {
-  const [{ language = 'java', code = '' }, setState] = useState<{
-    language: string;
-    code: string;
-  }>({
-    language: 'java',
-    code: `public class Main {
-  public static void main(String[] args) {
-    System.out.println("Hello World");
-  }
-}`,
-  });
+  // Filter Pokémon by search term
+  const filteredPokemon = pokemon.filter((p) =>
+    p.name.toLowerCase().includes(search.toLowerCase())
+  );
 
   return (
-    <div className="bg-base-100 flex h-screen w-screen text-neutral-200">
-      <div className="flex w-full flex-col">
-        <select
-          id="language"
-          name="language"
-          className="select select-ghost w-full"
-          value={language}
-          onChange={(event) =>
-            setState((previous) => ({
-              ...previous,
-              language: event.target.value,
-            }))
-          }>
-          <option value="java">Java</option>
-          <option value="python">Python</option>
-          <option value="rust">Rust</option>
-        </select>
-        <div className="grow">
-          <CodeMirror
-            value={code}
-            height="100%"
-            className="bg-base-100 h-full w-full"
-            theme={oneDark}
-            extensions={[languages[language]()]}
-            onChange={(value) =>
-              setState((previous) => ({ ...previous, code: value }))
-            }
-          />
-        </div>
+    <div className="bg-base-100 min-h-screen p-6">
+      {/* Header */}
+      <div className="mb-6 flex flex-col items-center gap-4">
+        <h1 className="text-primary text-4xl font-bold">Pokédex</h1>
+        <input
+          type="text"
+          placeholder="Search Pokémon..."
+          className="input input-bordered w-full max-w-md"
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+        />
       </div>
+
+      {/* Grid of Pokémon */}
+      <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+        {filteredPokemon.map((p) => (
+          <div
+            key={p.id}
+            className="card bg-base-200 flex flex-col items-center rounded-xl p-4 shadow-lg transition-transform hover:scale-105">
+            <img
+              src={`https://raw.githubusercontent.com/hieudoanm/pokedex/master/packages/data/pokemon/images/${p.id}.png`}
+              alt={p.name}
+              className="mb-2 h-20 w-20 object-contain"
+            />
+            <p className="text-center text-lg font-semibold capitalize">
+              {p.name}
+            </p>
+          </div>
+        ))}
+      </div>
+
+      {filteredPokemon.length === 0 && (
+        <p className="mt-8 text-center text-gray-500">No Pokémon found.</p>
+      )}
     </div>
   );
-}
+};
+
+export default AppPage;

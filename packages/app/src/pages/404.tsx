@@ -1,4 +1,4 @@
-import { ErrorTemplate } from '@coditor/templates/ErrorTemplate';
+import { ErrorTemplate } from '@pokedex/templates/ErrorTemplate';
 import { NextPage } from 'next';
 
 const messages = [

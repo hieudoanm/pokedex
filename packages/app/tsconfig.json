@@ -14,7 +14,7 @@
     "jsx": "react-jsx",
     "incremental": true,
     "paths": {
-      "@coditor/*": ["./src/*"]
+      "@pokedex/*": ["./src/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.mts"],

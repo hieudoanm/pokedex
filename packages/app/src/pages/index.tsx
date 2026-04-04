@@ -1,7 +1,7 @@
 import {
   LandingContent,
   LandingTemplate,
-} from '@coditor/templates/LandingTemplate';
+} from '@pokedex/templates/LandingTemplate';
 import { NextPage } from 'next';
 
 const content: LandingContent = {
