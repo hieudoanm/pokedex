@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "Pokemon": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "name": {
+          "type": "string",
+          "default": ""
+        },
+        "type": {
+          "type": "string",
+          "default": ""
+        },
+        "hp": {
+          "type": "integer",
+          "default": 0
+        },
+        "attack": {
+          "type": "integer",
+          "default": 0
+        },
+        "defense": {
+          "type": "integer",
+          "default": 0
+        },
+        "specialAttack": {
+          "type": "integer",
+          "default": 0
+        },
+        "specialDefense": {
+          "type": "integer",
+          "default": 0
+        },
+        "speed": {
+          "type": "integer",
+          "default": 0
+        }
+      }
+    }
+  },
+  "type": "object",
+  "properties": {
+    "pokemon": {
+      "$ref": "#/definitions/Pokemon"
+    }
+  }
+}

@@ -9,3 +9,18 @@ generator dbml {
 generator jsonSchema {
   provider = "prisma-json-schema-generator"
 }
+
+model Pokemon {
+  id             Int    @id @map("id")
+  name           String @default("") @map("name")
+  type           String @default("") @map("type")
+  hp             Int    @default(0) @map("hp")
+  attack         Int    @default(0) @map("attack")
+  defense        Int    @default(0) @map("defense")
+  specialAttack  Int    @default(0) @map("special_attack")
+  specialDefense Int    @default(0) @map("special_defense")
+  speed          Int    @default(0) @map("speed")
+
+  @@index([id])
+  @@map("pokemon")
+}

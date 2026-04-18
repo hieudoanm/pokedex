@@ -1,0 +1,15 @@
+//// ------------------------------------------------------
+//// THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+//// ------------------------------------------------------
+
+Table pokemon {
+  id Int [pk]
+  name String [not null, default: '']
+  type String [not null, default: '']
+  hp Int [not null, default: 0]
+  attack Int [not null, default: 0]
+  defense Int [not null, default: 0]
+  specialAttack Int [not null, default: 0]
+  specialDefense Int [not null, default: 0]
+  speed Int [not null, default: 0]
+}
